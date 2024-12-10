@@ -5,7 +5,7 @@
 ```bash
 # host machine
 docker compose build && docker compose up -d
-docker exec -it mqtt-mqtt-1 bash
+docker exec -it rabbitmqtt bash
 
 # container
 /tmp/init.sh
