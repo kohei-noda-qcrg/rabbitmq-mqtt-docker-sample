@@ -1,0 +1,7 @@
+FROM rabbitmq:4.0.4-management
+
+ARG TLS
+COPY init.sh /tmp
+COPY $TLS/* /etc/ssl/certs
+RUN chmod 664 /etc/ssl/certs/*
+RUN rabbitmq-plugins enable rabbitmq_mqtt
