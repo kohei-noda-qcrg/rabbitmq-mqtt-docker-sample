@@ -21,8 +21,9 @@ docker exec -it rabbitmqtt bash
   ```bash
   git clone https://github.com/rabbitmq/tls-gen
   cd tls-gen/basic
+  export CN=your_host_machine_address
   # no pasword
-  make CN=your_host_machine_address && make verify
+  make && make verify
   # with password
-  make CN=your_host_machine_address PASSWORD=your_password && make verify
+  make PASSWORD=your_password && make verify
   ```
