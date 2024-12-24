@@ -15,4 +15,4 @@ else
 	TLS="$1"
 fi
 
-docker compose build --build-arg TLS=$TLS
+docker compose build --build-arg TLS=$TLS --no-cache
