@@ -2,6 +2,7 @@ FROM rabbitmq:4.0.4-management
 
 ARG TLS
 COPY init.sh /tmp
+COPY rabbitmq.conf /etc/rabbitmq
 COPY $TLS/* /etc/ssl/certs
-RUN chmod 664 /etc/ssl/certs/*
+RUN chown rabbitmq:rabbitmq /etc/ssl/certs/*
 RUN rabbitmq-plugins enable rabbitmq_mqtt
