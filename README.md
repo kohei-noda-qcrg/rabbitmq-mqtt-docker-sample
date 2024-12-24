@@ -5,6 +5,10 @@
 ```bash
 # host machine
 ## TLS support
+### cert files must be named as following (if you don't want to follow this, you can edit rabbitmq.conf manually to change this behavior)
+### - ca cert file:     /path/to/certs/ca_certificate.pem
+### - server cert file: /path/to/certs/server_certificate.pem
+### - server key file:  /path/to/certs/server_key.pem
 ./build /path/to/certs && docker compose up -d
 docker exec -it rabbitmqtt bash
 ## no-TLS
