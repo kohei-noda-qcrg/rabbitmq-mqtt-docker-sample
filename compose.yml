@@ -3,6 +3,7 @@ services:
     container_name: 'rabbitmqtt'
     build:
       context: .
+      dockerfile: ${DOCKERFILE}
     ports:
       - "1883:1883"
       - "8883:8883"
