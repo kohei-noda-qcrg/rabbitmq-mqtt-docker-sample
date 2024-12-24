@@ -26,4 +26,8 @@ docker exec -it rabbitmqtt bash
   make && make verify
   # with password
   make PASSWORD=your_password && make verify
+
+  # rename the generated files
+  mv server_${CN}_certificate.pem server_certificate.pem
+  mv server_${CN}_key.pem server_key.pem
   ```
