@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: ${DOCKERFILE}
+      args:
+        TLS: ${TLS}
     ports:
-      - "1883:1883"
-      - "8883:8883"
+      - "${PORTMAP}"
       - "15672:15672"
