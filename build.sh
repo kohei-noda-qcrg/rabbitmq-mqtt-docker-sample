@@ -10,7 +10,7 @@ elif [[ ! -d "$1" ]]; then
 	exit 1
 else
 	echo "build tls Dockerfile"
-	echo -e "DOCKERFILE=DockerfileSSL\nPORTMAP=8883:8883\nTLS=$1" > .env
+	echo -e "DOCKERFILE=DockerfileTLS\nPORTMAP=8883:8883\nTLS=$1" > .env
 fi
 
 docker compose build --no-cache
